@@ -1,0 +1,17 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <changeSet context="legacy" author="n.romanov" id="insert initData to receipt table">
+        <insert tableName="receipt">
+            <column name="id" valueNumeric="1"/>
+            <column name="debt_amount" valueNumeric="5000"/>
+            <column name="dispatch_dt" valueDate="now()"/>
+            <column name="receipt_status" valueNumeric="1"/>
+            <column name="active_amount" valueNumeric="5000"/>
+            <column name="r_address_id" valueNumeric="1"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
